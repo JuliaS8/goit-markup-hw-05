@@ -67,9 +67,9 @@
           <h1 id="home" class="home-title">
             Effective Solutions for Your Business
           </h1>
-          <a href="#overlay-registration" class="button-overlay">
+          <div href="#overlay-registration" class="button-overlay">
             <button type="button" class="button">Order Service</button>
-          </a>
+          </div>
         </div>
       </section>
 
@@ -554,12 +554,13 @@
     </footer>
     <div class="overlay-registration" id="overlay-registration">
       <form class="registration-form" name="registration">
-        <button class="btn-close" type="button">
-          <a href="#" class="btn-close-link"></a>
-          <svg class="icon-close" width="24" height="24">
-            <use href="./images/icons.svg#icon-close"></use>
-          </svg>
-        </button>
+        <div href="#" class="btn-close-link">
+          <button class="btn-close" type="button">
+            <svg class="icon-close" width="24" height="24">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
 
         <p class="registration-text">
           Leave your contacts and we will call you back
@@ -602,6 +603,7 @@
             Comment
             <textarea
               class="form-input-t"
+              type="text"
               name="comment"
               rows="5"
               placeholder="Text input"

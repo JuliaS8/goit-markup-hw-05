@@ -112,7 +112,6 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
-  margin-top: 72px;
 }
 
 .modal {
@@ -127,6 +126,7 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 24px 24px 24px;
 }
 
 .btn-close {
@@ -150,34 +150,32 @@ img {
 .btn-close:hover {
   background-color: #404bbf;
   border: none;
-  fill: #ffffff;
 }
 
 .btn-close:focus {
   background-color: #404bbf;
   border: none;
+}
+
+.btn-close:hover .icon-close {
   fill: #ffffff;
 }
 
-.btn-close svg {
-  width: 8;
-  height: 8;
+.btn-close:focus .icon-close {
+  fill: #ffffff;
 }
 
 .icon-close {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.icon-close {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.icon-close:hover {
-  fill: #fff;
 }
 
 .fas {
   position: relative;
+  margin-bottom: 8px;
+}
+
+.modal-form {
+  margin-bottom: 8px;
 }
 
 .form-input {
@@ -191,20 +189,28 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input:hover {
+input:hover {
   border-color: #4d5ae5;
 }
 
+input:focus .icon-input {
+  fill: #4d5ae5;
+}
+
 .form-label {
-  display: flex;
+  display: block;
   flex-direction: column;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04;
+  margin-bottom: 4px;
+  color: #8e8f99;
 }
 
 .form-label-t {
   gap: 0;
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px;
 }
 
 .fas .icon {
@@ -219,7 +225,6 @@ img {
   position: absolute;
   left: 16px;
   top: 50%;
-  transform: translateY(-50%);
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -248,6 +253,14 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-label-t {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04;
+  margin-bottom: 4px;
+  color: #8e8f99;
+}
+
 .form-input-t:focus {
   border-color: #4d5ae5;
 }
@@ -268,14 +281,18 @@ img {
   align-items: center;
   justify-content: center;
   fill: transparent;
-}
-.input-checked input[type="checkbox"]:checked + label {
-  background-color: #404bbf;
-  border: none;
-  fill: #f4f4fd;
+  margin-right: 8px;
 }
 
-.accept {
+.checkbox-privacy input:checked + .user-privacy .checkbox-privacy-span {
+  background-color: #404bbf;
+}
+
+.icon-property {
+  fill: transparent;
+}
+
+.user-privacy {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;

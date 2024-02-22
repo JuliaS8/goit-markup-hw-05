@@ -856,6 +856,8 @@ footer .container {
 .button-subscribe {
   background-color: #4d5ae5;
   color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
   cursor: pointer;
   font-weight: 500;
   line-height: 1.5;

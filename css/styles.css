@@ -740,21 +740,16 @@ footer .container {
   border: none;
 }
 
-.btn-close:hover .icon-close use,
-.btn-close:focus .icon-close use {
-  fill: #ffffff;
-}
-
-.overlay-registration:hover .btn-close .icon-close use {
-  fill: #ffffff;
-}
-
-.overlay-registration:focus .btn-close .icon-close use {
-  fill: #ffffff;
-}
-
 .icon-close {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal .btn-close:hover .icon-close {
+  fill: #ffffff;
+}
+
+.modal .btn-close:focus .icon-close {
+  fill: #ffffff;
 }
 
 .fas {
@@ -766,10 +761,6 @@ footer .container {
   margin-bottom: 8px;
 }
 
-.text-area {
-  margin-bottom: 16px;
-}
-
 .form-input {
   width: 100%;
   height: 40px;
@@ -779,10 +770,6 @@ footer .container {
   padding-left: 38px;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-input:hover {
-  border-color: #4d5ae5;
 }
 
 input:focus .icon-input {
@@ -817,14 +804,6 @@ input:focus .icon-input {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-input:hover {
-  fill: #4d5ae5;
-}
-
-.icon-input:focus {
-  fill: #4d5ae5;
-}
-
 .form-input-t {
   width: 100%;
   height: 120px;
@@ -836,6 +815,7 @@ input:focus .icon-input {
   border-radius: 4px;
   background-color: transparent;
   padding: 8px 16px;
+  margin-bottom: 16px;
   outline: transparent;
   resize: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -849,15 +829,11 @@ input:focus .icon-input {
   color: #8e8f99;
 }
 
-.checkbox-privacy {
-  margin-bottom: 24px;
-}
-
-.form-input:focus + .fas .icon-input {
+.form-input:focus-within + .icon-input {
   fill: #4d5ae5;
 }
 
-textarea.form-input-t:focus {
+.form-input-t:focus-within {
   border-color: #4d5ae5;
 }
 
@@ -877,12 +853,12 @@ textarea.form-input-t:focus {
   background-color: transparent;
 }
 
-.checkbox-privacy input:checked + .user-privacy .checkbox-privacy-span {
-  background-color: #404bbf;
+.checkbox-privacy {
+  margin-bottom: 24px;
 }
 
-.icon-property {
-  fill: transparent;
+.checkbox-privacy input:checked + .user-privacy .checkbox-privacy-span {
+  background-color: #404bbf;
 }
 
 .user-privacy {
@@ -902,12 +878,6 @@ textarea.form-input-t:focus {
 .privacy-policy {
   color: #4d5ae5;
   text-decoration: underline;
-}
-
-.checkbox-done:checked .checkbox-privacy-span {
-  background-color: #404bbf;
-  border: none;
-  fill: #f4f4fd;
 }
 
 .button-send {
@@ -942,100 +912,29 @@ textarea.form-input-t:focus {
   background-color: #404bbf;
 }
 
-.btn-close:hover,
-.btn-close:focus {
-  background-color: #404bbf;
-  border: none;
-}
-
-.btn-close:hover .icon-close use,
-.btn-close:focus .icon-close use {
-  fill: #ffffff;
-}
-
-.input-checked:focus + .user-privacy .checkbox-privacy-span {
-  background-color: #404bbf;
-  border: none;
-  fill: #f4f4fd;
-}
-
-.input-checked:focus + .user-privacy .checkbox-privacy-span .icon-property {
-  fill: #4d5ae5;
-}
-
-.form-input:focus {
-  border-color: #4d5ae5;
-}
-
-.form-input:hover {
-  border-color: #4d5ae5;
-}
-
-.modal .btn-close:hover,
-.modal .btn-close:focus {
-  background-color: #404bbf;
-  border: none;
-}
-
-.modal .btn-close:hover .icon-close use,
-.modal .btn-close:focus .icon-close use {
-  fill: #ffffff;
-}
-
-.modal .input-checked:focus + .user-privacy .checkbox-privacy-span {
-  background-color: #404bbf;
-  border: none;
-  fill: #f4f4fd;
-}
-
-.modal
-  .input-checked:focus
+.checkbox-privacy
+  input:checked:focus-within
   + .user-privacy
-  .checkbox-privacy-span
-  .icon-property {
-  fill: #4d5ae5;
+  .checkbox-privacy-span {
+  background-color: #404bbf;
+  border: none;
 }
 
-.modal .overlay-registration:hover .btn-close .icon-close use {
-  fill: #ffffff;
-}
-
-.modal .overlay-registration:focus .btn-close .icon-close use {
-  fill: #ffffff;
-}
-
-.modal .form-input:focus,
-.modal .form-input:hover {
-  border-color: #4d5ae5;
-}
-
-.modal .form-input:focus + .fas .icon-input,
-.modal .form-input:hover + .fas .icon-input {
-  fill: #4d5ae5;
-}
-
-.modal textarea.form-input-t:focus {
-  border-color: #4d5ae5;
-}
-
-.modal .checkbox-privacy-span {
+.checkbox-privacy-span {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: transparent;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  fill: transparent;
 }
 
-.modal .checkbox-privacy-span:hover,
-.modal .checkbox-privacy-span:focus {
-  background-color: #404bbf;
+.user-privacy span {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-privacy input[type="checkbox"]:checked + .icon-done {
+  fill: #f4f4fd;
   border: none;
-}
-
-.modal .checkbox-privacy-span:hover .icon-property,
-.modal .checkbox-privacy-span:focus .icon-property {
-  fill: #4d5ae5;
 }
 
 /* #endregion */
